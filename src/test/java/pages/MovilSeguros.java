@@ -16,12 +16,23 @@ public class MovilSeguros extends AbstractPageObject {
 		// TODO Auto-generated constructor stub
 	}
 	
-	String name="Bruno";
-	String surname="Diaz";
-	String company="Wayne";
-	String position="chief";
-	String mail="bruce.wayne@waynecompany.com";
-	String msg="Hola, soy Bruno Díaz y me gustaría contactarme con ustedes para contratar su servicio.";
+	String name="John";
+	String surname="Fante";
+	String company="Fante Company";
+	String position="writer";
+	String mail="johnfante@script-cinema.com";
+	String msg="Hola, soy John Fante y me gustaría conocer acerca del servicio de contra.";
+	
+	
+	
+	public void BuscarWebSeguro() throws InterruptedException {
+		String fElemen = "aplicaciones app seguros";
+		WebElement bar = driver.findElement(By.id("lst-ib"));
+				bar.sendKeys(fElemen);
+				TimeUnit.SECONDS.sleep(2);
+				driver.findElement(By.name("btnK")).click();		
+	}
+	
 	
 	
 	public void CompleteForm() {
@@ -60,6 +71,14 @@ public class MovilSeguros extends AbstractPageObject {
 		TimeUnit.SECONDS.sleep(2);
 	//	driver.findElement(By.xpath("//*[@id=\"player_uid_527886069_1\"]/div[4]/div[1]")).click();
 	}
+	
+	
+	public void PlayVideo() {
+		WebElement video = driver.findElement(By.xpath("//*[@id=\"player_uid_927054242_1\"]/div[4]/div[1]"));
+			video.click();
+			
+	}
+	
 	
 	
 }

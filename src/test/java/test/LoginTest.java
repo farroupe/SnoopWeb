@@ -9,10 +9,9 @@ import org.apache.xalan.xsltc.compiler.Template;
 import org.junit.Test;
 import org.openqa.selenium.WebElement;
 
-import pageFactory.AbstractPageObject;
-
 import pages.HomePage;
 import pages.MovilSeguros;
+
 
 
 
@@ -32,6 +31,7 @@ public class LoginTest extends BaseTest {
 	public void LTIngresarWeb() {
 		HomePage homePage = new HomePage(driver, driverWait);
 		homePage.CliquearWeb();
+		homePage.ValidarSpan();
 	}
 	
 	public void LTCompleteForm() {
@@ -49,7 +49,14 @@ public class LoginTest extends BaseTest {
 		movil.ButtonClick();
 	}
 	
+	public void LTBuscarWebSeguros() throws InterruptedException {
+		MovilSeguros movil = new MovilSeguros(driver, driverWait);
+		movil.BuscarWebSeguro();
+	}
 	
+	public void LTPlayVideo() {
+		MovilSeguros movil = new MovilSeguros(driver, driverWait);
+		movil.PlayVideo();
+	}
 	
-
 }
