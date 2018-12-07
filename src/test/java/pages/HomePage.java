@@ -24,7 +24,7 @@ public class HomePage extends AbstractPageObject {
 
 	public void BuscarWeb() throws InterruptedException {
 		String fElemen = "Snoop Consulting";
-		WebElement bar = driver.findElement(By.id("lst-ib"));
+		WebElement bar = driver.findElement(By.name("q"));
 				bar.sendKeys(fElemen);
 				TimeUnit.SECONDS.sleep(2);
 				//WebElement btn = driver.findElement(By.name("btnK")).click();
@@ -33,7 +33,7 @@ public class HomePage extends AbstractPageObject {
 	
 	public void CliquearWeb() {
 		//driver.findElement(By.xpath("//*[@id=\"vn1s0p1c0\"]")).click(); //Primer resultado de la búsqueda de google.
-		WebElement resultado = driver.findElement(By.xpath("//*[@id='rso']/div[1]/div/div/div/div/h3/a"));
+		WebElement resultado = driver.findElement(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div/div/div[1]/a/h3"));
 		System.out.println(resultado.getText());
 		Assert.assertEquals("Snoop Consulting: Empresa desarrollo IT, mobile, software, social", resultado.getText());
 		resultado.click();

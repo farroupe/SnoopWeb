@@ -18,21 +18,29 @@ public class Controller {
 		snoop.LTIngresarWeb();
 	}
 	
-	@Test//Este Test se debe ejecutar de 9 a 18hs.
+	@Test
+	public void CIngresarANosotros() throws InterruptedException {
+		LoginTest snoop = new LoginTest();
+		snoop.LTBuscarWeb();
+		snoop.LTIngresarWeb();
+		snoop.LTClickOnLaEmpresa();
+		snoop.LTGoToEmpresa();
+		snoop.LTGoToPartners();
+		snoop.LTCheckPartners();
+		snoop.LTGoToQuienesSomos();
+	}
+	
+	
+	//Este Test se debe ejecutar de 9 a 18hs.
 	public void CLandingPage() throws InterruptedException {
-		
-	/*	ZonedDateTime fecha = ZonedDateTime.now();
-		System.out.println(fecha);
-		System.out.println(ZonedDateTime.now().format(DateTimeFormatter.RFC_1123_DATE_TIME));
-	*/			
-			LoginTest snoop = new LoginTest();
-			snoop.LTBuscarWebSeguros();
-			snoop.LTIngresarWeb();
-			snoop.LTCompleteForm();
-			snoop.LTViewForm();
-			snoop.LTButtonClick();
-			snoop.LTPlayVideo();
-		}
+		LoginTest snoop = new LoginTest();
+		snoop.LTBuscarWebSeguros();
+		snoop.LTIngresarWeb();
+		snoop.LTCompleteForm();
+		snoop.LTViewForm();
+		snoop.LTButtonClick();
+		snoop.LTPlayVideo();
+	}
 	
 
 }

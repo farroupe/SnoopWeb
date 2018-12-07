@@ -9,8 +9,10 @@ import org.apache.xalan.xsltc.compiler.Template;
 import org.junit.Test;
 import org.openqa.selenium.WebElement;
 
+import gherkin.lexer.No;
 import pages.HomePage;
 import pages.MovilSeguros;
+import pages.Nosotros;
 
 
 
@@ -59,4 +61,28 @@ public class LoginTest extends BaseTest {
 		movil.PlayVideo();
 	}
 	
+	public void LTClickOnLaEmpresa() {
+		Nosotros nos = new Nosotros(driver, driverWait);
+		nos.ClickOnNosotros();
+	}
+	
+	public void LTGoToEmpresa() throws InterruptedException {
+		Nosotros nos = new Nosotros(driver, driverWait);
+		nos.ScrollToLaEmpresa();
+	}
+	
+	public void LTGoToPartners() throws InterruptedException {
+		Nosotros nos = new Nosotros(driver, driverWait);
+		nos.ScrollToPartners();
+	}
+	
+	public void LTCheckPartners() throws InterruptedException {
+		Nosotros nos = new Nosotros(driver, driverWait);
+		nos.CheckPartners();
+	}
+	
+	public void LTGoToQuienesSomos() throws InterruptedException {
+		Nosotros nos = new Nosotros(driver, driverWait);
+		nos.ScrollToQuienesSomos();
+	}
 }
